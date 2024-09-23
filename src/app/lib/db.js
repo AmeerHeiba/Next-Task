@@ -1,13 +1,19 @@
 import { MongoClient } from "mongodb";
 
 let db;
+const uri = process.env.MONGODB_URI;
+
 if (!db) {
-  const mongoClient = new MongoClient("mongodb+srv://ameerabdullahheiba:rV7kiXJlGh6rlGKz@cluster0.8i1jk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
-  const options = {
-    ssl:true
-  }
-  const clientPromise = await mongoClient.connect(options);
+  const mongoClient = new MongoClient(uri, {
+    ssl: true,
+    useUnifiedTopology: true,
+  });
+  const clientPromise = await mongoClient.connect();
   db = clientPromise.db();
 }
 
 export default db;
+
+
+
+//mongodb+srv://ameerabdullahheiba:rV7kiXJlGh6rlGKz@cluster0.8i1jk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

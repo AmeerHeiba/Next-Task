@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 
 let db;
-const uri = process.env.MONGODB_URI;
+const uri = "mongodb+srv://ameerabdullahheiba:rV7kiXJlGh6rlGKz@cluster0.8i1jk.mongodb.net/posts?retryWrites=true&w=majority&appName=Cluster0";
 
 if (!db) {
   try {
@@ -22,3 +22,4 @@ export default db;
 
 
 //mongodb+srv://ameerabdullahheiba:rV7kiXJlGh6rlGKz@cluster0.8i1jk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/next?retryWrites=true&w=majority
+//mongodb+srv://ameerabdullahheiba:rV7kiXJlGh6rlGKz@cluster0.8i1jk.mongodb.net/posts?retryWrites=true&w=majority&appName=Cluster0

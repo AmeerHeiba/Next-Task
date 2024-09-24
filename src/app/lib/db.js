@@ -5,9 +5,7 @@ const uri = "mongodb+srv://ameerabdullahheiba:rV7kiXJlGh6rlGKz@cluster0.8i1jk.mo
 
 if (!db) {
   try {
-    const mongoClient = new MongoClient(uri, {
-      ssl: true,  
-    });
+    const mongoClient = new MongoClient(uri);
     
     // Connect and set db
     const client = await mongoClient.connect();
